@@ -39,4 +39,4 @@ This repository is organized into daily progress, projects, and resources. Here'
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/100DaysOfDataAnalytics.git
+   git clone https://github.com/Eric-BR2001/100DaysOfDataAnalytics.git
