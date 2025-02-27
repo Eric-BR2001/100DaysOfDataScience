@@ -1,6 +1,6 @@
-# 100 Days of Data Analytics 🚀
+# 100 Days of Data Science/Data Analytics 🚀
 
-Welcome to my **#100DaysOfDataAnalytics** challenge repository! This is where I document my journey of learning and practicing Data Analytics over 100 days. My goal is to build a strong foundation in data analysis, visualization, and storytelling, while working on real-world projects.
+Welcome to my **#100Days** challenge repository! This is where I document my journey of learning and practicing Data Science and Data Analytics over 100 days. My goal is to build a strong foundation in data analysis, visualization, and storytelling, while working on real-world projects.
 
 ---
 
