@@ -1,42 +1,40 @@
-# 100 Days of Data Science/Data Analytics 🚀
+# Cards Issued Difference
+## JP Morgan SQL Interview Question
 
-Welcome to my **#100Days** challenge repository! This is where I document my journey of learning and practicing Data Science and Data Analytics over 100 days. My goal is to build a strong foundation in data analysis, visualization, and storytelling, while working on real-world projects.
+Your team at JPMorgan Chase is preparing to launch a new credit card, and to gain some insights, you're analyzing how many credit cards were issued each month.
 
----
+### Problem Statement
+Write a query that outputs the name of each credit card and the difference in the number of issued cards between the month with the highest issuance and the lowest issuance. Arrange the results based on the largest disparity.
 
-## What's Inside? 📂
+### Table: `monthly_cards_issued`
+| Column Name    | Type    |
+|----------------|---------|
+| card_name      | string  |
+| issued_amount  | integer |
+| issue_month    | integer |
+| issue_year     | integer |
 
-This repository is organized into daily progress, projects, and resources. Here's what you'll find:
+### Example Input
 
-- **Daily Progress:** Code, notes, and mini-projects from each day.
-- **Projects:** End-to-end data analysis projects using Python, SQL, and visualization tools.
-- **Datasets:** Public datasets used for analysis and practice.
-- **Resources:** Links to courses, books, and tutorials I used during the challenge.
+card_name               | issued_amount | issue_month | issue_year
+------------------------|---------------|-------------|-----------
+Chase Freedom Flex      | 55000         | 1           | 2021
+Chase Freedom Flex      | 60000         | 2           | 2021
+Chase Freedom Flex      | 65000         | 3           | 2021
+Chase Freedom Flex      | 70000         | 4           | 2021
+Chase Sapphire Reserve  | 170000        | 1           | 2021
+Chase Sapphire Reserve  | 175000        | 2           | 2021
+Chase Sapphire Reserve  | 180000        | 3           | 2021
 
----
+### Example Output
 
-## Topics Covered 📊
+card_name               | difference
+------------------------|-----------
+Chase Freedom Flex      | 15000
+Chase Sapphire Reserve  | 10000
 
-- **SQL:** Querying databases, data manipulation, and analysis.
-- **Python for Data Analysis:** Pandas, NumPy, Matplotlib, Seaborn.
-- **Data Visualization:** Tableau, Power BI, and Python libraries.
-- **Statistics & EDA:** Exploratory Data Analysis, statistical concepts.
-- **Machine Learning Basics:** Regression, classification, and model evaluation.
+## My Solution:
 
----
+SELECT card_name,MAX(issued_amount) - MIN(issued_amount) AS difference FROM monthly_cards_issued GROUP BY card_name ORDER BY 2 DESC;
 
-## Tools & Technologies 🛠️
-
-- **Programming Languages:** Python, SQL.
-- **Libraries:** Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn.
-- **Visualization Tools:** Tableau, Power BI.
-- **Databases:** MySQL, PostgreSQL, SQLite.
-- **Environment:** Jupyter Notebook, Google Colab, VS Code.
-
----
-
-## How to Use This Repository
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Eric-BR2001/100DaysOfDataAnalytics.git
+### I used the fuction MAX, to get the max number. And I used the fuction MIN, to get the min number.  
