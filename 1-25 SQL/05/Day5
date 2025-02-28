@@ -1,0 +1,2 @@
+select date,ad_type,SUM(revenue) from ads_data_revenue_1 group by date,ad_type UNION select date,ad_type,SUM(revenue) from ads_data_revenue_1 group by date,ad_type
+select name,message,likes_count from bbc_228735667216_2 where likes_count>1000 UNION select name,message,likes_count from cbs_news_131459315949_2 where likes_count>1000 order by 1 limit 100

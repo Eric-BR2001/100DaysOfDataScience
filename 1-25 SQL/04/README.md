@@ -128,7 +128,7 @@ SELECT drug, (total_sales - cogs) AS total_profit FROM pharmacy_sales ORDER BY t
 | green, black | null | Unnamed Manticore |  | manticore | 2 | kg |
 | black | null | Unnamed Shadowcat |  | shadowcat | 82 | kg |
 
-
+---
 select character_name from got_characters where character_name like "%Stark" order by 1
 select character_name from got_characters where character_name LIKE "Jon%"
 select character_name from got_characters where character_name LIKE "%ae%"
